@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Embed KrakenFiles</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    iframe {
+        border: 0;
+        width: 640px;
+        height: 360px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #ff4444;
+        color: white;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background: #ff2222;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <iframe 
+        src="https://krakenfiles.com/embed-video/cluA8rDpDd"
+        allowfullscreen="true"
+        webkitallowfullscreen="true"
+        mozallowfullscreen="true">
+    </iframe>
+
+    <button onclick="fullscreenIframe()">Fullscreen</button>
+</div>
+
+<script>
+    function fullscreenIframe() {
+        const iframe = document.querySelector("iframe");
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { 
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { 
+            iframe.mozRequestFullScreen();
+        }
+    }
+</script>
+
+</body>
+  </html>
